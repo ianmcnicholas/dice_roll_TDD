@@ -9,11 +9,11 @@ describe Dice do
 #  end
 
   it "when rolled returns a number between 1 and 6" do
-    expect(subject.roll[0]).to be_between(1, 6)
+    expect(subject.roll).to be_between(1, 6)
   end
 
-  it "when 4 dice are rolled, expects 4 outcomes" do
-    expect(subject.roll(4).length).to eq(4)
+  it "when 7 dice are rolled, expects score to exceed 6" do
+    expect(subject.roll(7)).to be > 6
 
   end
 

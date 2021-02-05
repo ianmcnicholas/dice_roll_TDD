@@ -6,10 +6,11 @@ class Dice
   end
 
   def roll(number = 1)
-    scores = []
-    number.times { scores.push(rand(1..6)) }
+    scores = 0
+    number.times { scores += (rand(1..6)) }
     @tracked_scores << scores
     scores
   end
+
 
 end
