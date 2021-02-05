@@ -22,5 +22,11 @@ describe Dice do
     expect(subject.tracked_scores.length).to eq 5
   end
 
+  it "expects current_score method to be current score" do
+    5.times { subject.roll }
+    5.times { subject.roll }
+    expect(subject.current_score).to be_between(10, 60)
+  end
+
 
 end
